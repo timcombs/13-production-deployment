@@ -9,8 +9,10 @@
       reposObj.withTheAttribute('name')
       .map(repoCompiler)
     );
+
+    //this is not formatted to display followers and repos correctly
     $('#about .followers').empty().append(
-       reposObj.followers.map(followersCompiler)
+       reposObj.allRepos.map(followersCompiler)
      );
   };
   reposObj.requestRepos(repoView.renderRepos);
